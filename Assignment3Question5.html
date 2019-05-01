@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML>
+<!-- Assignment 3, Question 5-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<style>
+				body {background-color: lightblue;}
+				.col1 {border-color: #004060; color: #00a9ff; background-color: #004060;}
+				.col2 {border-color: #ff96df; color: #ffddfa; background-color: #ff96df;}
+				label.warning {font-weight: bold;}
+				legend {font-size: 20px}
+                .sug{
+                    visibility: hidden;
+                    background-color: mediumpurple;
+                    color: orange;
+                }
+                .sugleg{
+                    background-color: mediumpurple;
+                    color: orange;
+                }
+				
+				
+		</style>
+        <script type="text/javascript" src="a3q5.js"></script>
+		<title>Assignment 1: Question 4</title>
+	</head>
+	
+	<body>
+			<table>
+			<tr>
+				<td><a href="https://folioart.co.uk/product/grand-budapest/"><img src="https://s3-eu-west-2.amazonaws.com/folio-website-images/content/uploads/2018/07/25093042/James-Gilleard-Grand-Budapest.jpg" alt="Hotel Image" width="200" height="200"></a></td>
+				<td><h1>Hotel Reservation Form</h1></td>
+			</tr>
+			</table>
+            <form action="" name="frm">
+                <fieldset class="col1">
+                    <legend class="col1">Reservation Information</legend>
+                    <label class="warning">Number of Rooms (maximum: 5 people per room):</label>
+                    <input type="number" name="numRooms" />
+                    <br /><br />
+                    <label class="warning">Smoker?</label>
+                    <label class="warning"><input type="radio" name="smoker" value="yes" />Yes</label>
+                    <label class="warning"><input type="radio" name="smoker" value="no" checked />No</label>
+                    <br /><br />
+                    <label class="warning">Check-in Date:</label>
+                    <input type="text" name="checkin" />
+                    <br /><br />
+                    <label class="warning">Check-out Date:</label>
+                    <input type="text" name="checkout" />
+                    <br /><br />
+                </fieldset>
+
+                <fieldset class="col2">
+                    <legend class="col2">Room Specifications</legend>
+                    <ul>
+                        <li>
+                            <label class="warning">Number of single/double beds:</label><br />
+                            <label><input type="checkbox" name="bedTypes" value="0/2" />0/2 </label>
+                            <label><input type="checkbox" name="bedTypes" value="2/0" />2/0 </label>
+                            <label><input type="checkbox" name="bedTypes" value="1/1" />1/1 </label>
+                            <label><input type="checkbox" name="bedTypes" value="2/1" />2/1 </label>
+                            <label><input type="checkbox" name="bedTypes" value="1/2" />1/2 </label>
+                            <br /><br />
+                        </li>
+                        <li>
+                            <label class="warning">Do you have any preferred locations for the hotel?</label><br />
+                            <label><input type="checkbox" name="location" value="downtown" checked id="dtown" />Downtown </label>
+                            <label><input type="checkbox" name="location" value="mtleast" />Montreal East </label>
+                            <label><input type="checkbox" name="location" value="mtlwest" />Montreal West </label>
+                            <label><input type="checkbox" name="location" value="airport" />Near the airport </label>
+                            <label><input type="checkbox" name="location" value="oldport" />Oldport </label>
+                            <label><input type="checkbox" name="location" value="dontcare" />Don't care </label>
+                            <br /><br />
+                        </li>
+                        <li>
+                            <label class="warning">Price Range/night:</label><br />
+                            <select name="pRange">
+                                <option value="no" >No price limit</option>
+                                <option value="less50">Less than 50$</option>
+                                <option value="50to80" id="50to80">50-80$</option>
+                                <option value="80to100" id="80to100">80-100$</option>
+                                <option value="100to120">100-120$</option>
+                            </select>
+                            <br /><br />
+                        </li>
+                        <li>
+                            <label class="warning">Number of Private Parking Spots:</label><br />
+                            <label><input type="radio" name="parking" value="0" checked />0</label><br />
+                            <label><input type="radio" name="parking" value="1" />1</label><br />
+                            <label><input type="radio" name="parking" value="2" />2</label><br />
+                            <label><input type="radio" name="parking" value="3" />3</label><br />
+                            <label><input type="radio" name="parking" value="4" />4</label><br />
+                            <label><input type="radio" name="parking" value="5" />5</label>
+                            <br /><br />
+                        </li>
+                        <li>
+                            <label class="warning">Special Facilities: </label><br />
+                            <label><input type="checkbox" name="facility" value="minibar" checked />Minibar </label>
+                            <label><input type="checkbox" name="facility" value="balcony" />Balcony </label>
+                            <label><input type="checkbox" name="facility" value="pool" />Pool </label>
+                            <label><input type="checkbox" name="facility" value="wFront" />Water Front </label>
+                            <label><input type="checkbox" name="facility" value="gFront" />Garden Front </label>
+                            <label><input type="checkbox" name="facility" value="gRoom" />Game Room </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                    <fieldset id ="res" class="sug">
+                        <legend class="sugleg">Expert Suggestion</legend>
+                        <ul>
+                            <li>It could be hard to find a hotel room in this price range Downtown.</li>   
+                        </ul>
+                    </fieldset>
+
+                Let's see what we can find for you!
+                <br /><br />
+                <input type="button" name="Search" value="Search" onclick="expSuggesAppear()" />
+                <input type="reset" name="Start Over" value="Start Over" />
+            </form>
+	</body>
+</html>

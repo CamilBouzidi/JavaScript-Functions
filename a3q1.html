@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment3Question1</title>
+    <script type="text/javascript" src="a3q1.js"></script>
+    <style>
+        .aligned{
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 3 Question 1 (By Camil Bouzidi)</h1>
+    <form id="form1">
+        Search in this text: <br />
+        <textarea rows="10" cols="80" name="userText"></textarea><br />
+        <label class="aligned">
+            Split the text according to these characters:
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+            <input type="text" size="20" name="delimit" /><br />
+        </label>
+        <label class="aligned">
+            Test each word with this regex:
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+            <input type="text" size="20" name="reg" class="aligned" /><br />
+        </label>
+        <label class="aligned">
+            Modifiers for the regex:
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+            <input type="text" size="5" name="mod" class="aligned" /><br />
+
+        </label>
+        <input type="button" name="search" value="Search" onclick="findRegex()" /> <input type="reset" value="reset" name="reset" />
+    </form>
+    <div id="resblock"></div>
+
+</body>
+</html>

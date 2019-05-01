@@ -1,0 +1,14 @@
+body {
+    color: mediumblue;
+}
+
+#frm {
+    border-color: mediumblue;
+    padding: 10px;
+    color: mediumblue;
+    background-color: darkorange;
+}
+
+div.result {
+    background-color: darkorange;
+}
